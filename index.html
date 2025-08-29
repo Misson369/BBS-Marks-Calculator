@@ -436,6 +436,18 @@ footer {
     </div>
   </div>
 
+  <!-- About Modal -->
+  <div id="aboutModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-box"> 
+       <button id="closeAbout" class="modal-close">Close</button>
+      <h2>About — BBS Result Calculator</h2>
+      <p>Welcome to BBS Result Calculator! This website helps students calculate their results easily and accurately.</p>
+      <p>The service is designed to be simple, fast, and completely offline—so your data never leaves your device.</p>
+       <h3>Purpose</h3>
+      <p>Our goal is to provide students with an easy tool to check their expected marks and percentages quickly.</p>
+    </div>
+  </div>
+      
 <script>
 /* ---------- Menu & modal logic ---------- */
 const menuBtn = document.getElementById('menuBtn');
@@ -445,7 +457,12 @@ const menuPrivacy = document.getElementById('menuPrivacy');
 const privacyModal = document.getElementById('privacyModal');
 const closePrivacy = document.getElementById('closePrivacy');
   const menuAbout = document.getElementById('menuAbout');
+  const aboutModal = document.getElementById('aboutModal');
+  const closeAbout = document.getElementById('closeAbout');
   const menuContact = document.getElementById('menuContact');
+  const contactModal = document.getElementById('contactModal');
+const closeContact = document.getElementById('closeContact');
+  
 menuBtn.addEventListener('click', (e) => {
   e.stopPropagation();
   const shown = menuDropdown.style.display === 'block';
