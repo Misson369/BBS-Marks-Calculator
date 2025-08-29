@@ -505,6 +505,38 @@ privacyModal.addEventListener('click', (e) => {
   }
 });
 
+  menuAbout.addEventListener('click', (e) => {
+  e.preventDefault();
+  aboutModal.style.display = 'flex';
+  aboutModal.setAttribute('aria-hidden','false');
+  menuDropdown.style.display = 'none';
+});
+closeAbout.addEventListener('click', () => {
+  aboutModal.style.display = 'none';
+  aboutModal.setAttribute('aria-hidden','true');
+});
+aboutModal.addEventListener('click', (e) => {
+  if(e.target === aboutModal){
+    aboutModal.style.display = 'none';
+    aboutModal.setAttribute('aria-hidden','true');
+  }
+});
+  menuContact.addEventListener('click', (e) => {
+  e.preventDefault();
+  contactModal.style.display = 'flex';
+  contactModal.setAttribute('aria-hidden','false');
+  menuDropdown.style.display = 'none';
+});
+closeContact.addEventListener('click', () => {
+  contactModal.style.display = 'none';
+  contactModal.setAttribute('aria-hidden','true');
+});
+contactModal.addEventListener('click', (e) => {
+  if(e.target === contactModal){
+    contactModal.style.display = 'none';
+    contactModal.setAttribute('aria-hidden','true');
+  }
+});
 
 /* ---------- Validation hints ---------- */
 const inputs = Array.from(document.querySelectorAll('input[type="number"]'));
